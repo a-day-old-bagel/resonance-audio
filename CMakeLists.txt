@@ -40,6 +40,7 @@ project(ResonanceAudio)
 
 # Build options
 option(BUILD_RESONANCE_AUDIO_API "Build Resonance Audio API." OFF)
+option(INSTALL_RESONANCE_AUDIO_API "Install Resonance Audio API." OFF)
 option(BUILD_RESONANCE_AUDIO_TESTS "Build Resonance Audio Unit Tests" OFF)
 option(BUILD_UNITY_PLUGIN "Build Unity Resonance Audio Plugin" OFF)
 option(BUILD_GEOMETRICAL_ACOUSTICS_TESTS "Build Resonance Audio's Geometrical Acoustics Tests" OFF)
