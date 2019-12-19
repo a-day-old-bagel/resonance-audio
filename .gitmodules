@@ -1,6 +1,3 @@
-[submodule "third_party/pffft"]
-	path = third_party/pffft
-	url = https://github.com/marton78/pffft
 [submodule "third_party/eigen"]
 	path = third_party/eigen
 	url = https://gitlab.com/libeigen/eigen
