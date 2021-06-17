@@ -32,7 +32,7 @@ constexpr uint64_t kMaxProducers = kInvalidIndex - 1;
 
 }  // namespace
 
-LocklessTaskQueue::LocklessTaskQueue(size_t max_tasks) {
+LocklessTaskQueue::LocklessTaskQueue(std::size_t max_tasks) {
   CHECK_GT(max_tasks, 0U);
   CHECK_LE(max_tasks, kMaxProducers);
   Init(max_tasks);
@@ -138,13 +138,13 @@ void LocklessTaskQueue::ProcessTaskList(TagAndIndex list_head_idx,
   temp_tasks_.clear();
 }
 
-void LocklessTaskQueue::Init(size_t num_nodes) {
+void LocklessTaskQueue::Init(std::size_t num_nodes) {
   nodes_.resize(num_nodes);
   temp_tasks_.reserve(num_nodes);
 
   // Initialize free list.
   free_list_head_idx_ = 0;
-  for (size_t i = 0; i < num_nodes - 1; ++i) {
+  for (std::size_t i = 0; i < num_nodes - 1; ++i) {
     nodes_[i].next = i + 1;
   }
   nodes_[num_nodes - 1].next = kInvalidIndex;
